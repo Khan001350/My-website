@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سایت شخصی عمران خان احمدزی</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Tahoma', sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            animation-delay: 2s;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .about {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            max-width: 400px;
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        .about h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .about p {
+            color: #555;
+            font-size: 1rem;
+        }
+        .about a {
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .about a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>به سایت عمران خان احمدزی خوش آمدید</h1>
+    <button onclick="showAbout()">بیشتر بدانید</button>
+    <div class="about" id="aboutSection">
+        <h2>درباره من</h2>
+        <p>من عمران خان احمدزی هستم، علاقه‌مند به تکنالوژی، برنامه‌نویسی و رشد شخصی. هدفم پیشرفت در دنیای تکنالوژی و ساختن آینده‌ای بهتر است.</p>
+        <p>ایمیل تماس: <a href="mailto:amrankhanahmadzai001@gmail.com">amrankhanahmadzai001@gmail.com</a></p>
+    </div>
+
+    <script>
+        function showAbout() {
+            var about = document.getElementById('aboutSection');
+            if (about.style.display === "none" || about.style.display === "") {
+                about.style.display = "block";
+            } else {
+                about.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
